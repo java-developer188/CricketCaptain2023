@@ -32,7 +32,9 @@ public class StartController {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/play/Play.fxml"));
 			Parent root = loader.load();
-			stage.setScene(new Scene(root));
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
+			stage.setScene(scene);
 			stage.setFullScreen(true);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

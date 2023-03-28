@@ -33,7 +33,8 @@ public class Main extends Application {
 	            }
 			});
 
-			primaryStage.getIcons().add(new Image("file:/cc23.jpeg"));
+			primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/cc23.jpeg")));
+			primaryStage.setTitle("Cricket Captain 2023");
 			primaryStage.setScene(scene);
 			primaryStage.setFullScreen(false);
 			primaryStage.setResizable(false);
