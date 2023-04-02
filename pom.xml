@@ -12,6 +12,9 @@
           <exclude>**/*.java</exclude>
         </excludes>
       </resource>
+      <resource>
+        <directory>resources</directory>
+      </resource>
     </resources>
     <plugins>
       <plugin>
@@ -24,4 +27,26 @@
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+  <!-- SQLite JDBC driver -->
+<dependency>
+    <groupId>org.xerial</groupId>
+    <artifactId>sqlite-jdbc</artifactId>
+    <version>3.36.0.1</version>
+</dependency>
+
+<!-- ORMLite Core -->
+<dependency>
+    <groupId>com.j256.ormlite</groupId>
+    <artifactId>ormlite-core</artifactId>
+    <version>5.6</version>
+</dependency>
+
+<!-- ORMLite JDBC driver -->
+<dependency>
+    <groupId>com.j256.ormlite</groupId>
+    <artifactId>ormlite-jdbc</artifactId>
+    <version>5.6</version>
+</dependency>
+  </dependencies>
 </project>

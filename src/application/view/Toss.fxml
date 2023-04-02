@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.transform.Rotate?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TossController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="2.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fx:id="coinImageView" fitHeight="179.0" fitWidth="177.0" layoutX="100.0" layoutY="100.0" HBox.hgrow="ALWAYS">
+      <image>
+         <Image url="@../../coinfront.jpg" />
+      </image>
+               <HBox.margin>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </HBox.margin>
+   </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="35.0" spacing="2.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="tossMessageLabel" text="Label" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="coinImageView2" fitHeight="179.0" fitWidth="177.0">
+                                 <image>
+                                    <Image url="@../../coinfront.jpg" />
+                                 </image>
+                                 <transforms>
+                                    <Rotate fx:id="rotateTransform2" />
+                                 </transforms>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Button fx:id="headsButton" mnemonicParsing="false" onAction="#doToss" text="Heads" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="coinImageView11" fitHeight="179.0" fitWidth="177.0" VBox.vgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../../coinback.jpg" />
+                                 </image>
+                                 <transforms>
+                                    <Rotate fx:id="rotateTransform11" />
+                                 </transforms>
+                              </ImageView>
+                              <Button fx:id="tailsButton1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doToss" text="Tails" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

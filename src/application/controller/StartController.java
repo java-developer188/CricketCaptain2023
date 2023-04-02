@@ -1,4 +1,4 @@
-package application;
+package application.controller;
 
 import java.io.IOException;
 
@@ -25,12 +25,25 @@ public class StartController {
 
 	public void play(KeyEvent event) {
 		Scene scene = (Scene) event.getSource();
-		switchToPlayScene((Stage) scene.getWindow());
+		switchToTossScene((Stage) scene.getWindow());
 
+	}
+	
+	public void switchToTossScene(Stage stage) {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/view/Toss.fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
+			stage.setScene(scene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public void switchToPlayScene(Stage stage) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/play/Play.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/view/Play.fxml"));
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());

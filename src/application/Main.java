@@ -1,5 +1,6 @@
 package application;
 	
+import application.controller.StartController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -16,7 +17,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Start.fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/view/Start.fxml"));
 			Parent root = fxmlLoader.load();
 			
 			StartController startController = fxmlLoader.getController();
@@ -33,7 +34,7 @@ public class Main extends Application {
 	            }
 			});
 
-			primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/cc23.jpeg")));
+			primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("../cc23.jpeg")));
 			primaryStage.setTitle("Cricket Captain 2023");
 			primaryStage.setScene(scene);
 			primaryStage.setFullScreen(false);
